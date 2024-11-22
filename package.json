@@ -1,0 +1,118 @@
+{
+  "name": "extensionproject",
+  "displayName": "extensionProject",
+  "description": "yes",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+    {
+      "command": "extension.removeDuplicateText",
+      "title": "文本去重"
+    },
+    {
+      "command": "extension.sortSelectedText",
+      "title": "文本排序"
+    },
+    {
+      "command": "extension.applyRegexFilteripv4",
+      "title": "提取IPv4"
+    },
+    {
+      "command": "extension.base64Encode",
+      "title": "Base64编码"
+    },
+    {
+      "command": "extension.base64Decode",
+      "title": "Base64解码"
+    },
+    {
+      "command": "extension.extractDomains",
+      "title": "提取域名"
+    },
+    {
+      "command": "extension.extractUrls",
+      "title": "提取URL"
+    },
+    {
+      "command": "extension.filterRouters",
+      "title": "提取路由"
+    }
+    
+  ],
+    
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.removeDuplicateText", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "文本去重"
+        },
+        {
+          "command": "extension.sortSelectedText", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "文本排序"
+        },
+        {
+          "command": "extension.applyRegexFilteripv4", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "提取IPv4"
+        },
+        {
+          "command": "extension.base64Encode", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "Base64编码"
+        },
+        {
+          "command": "extension.base64Decode", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "Base64解码"
+        },
+        {
+          "command": "extension.extractDomains", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "提取域名"
+        },
+        {
+          "command": "extension.extractUrls", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "提取URL"
+        },
+        {
+          "command": "extension.filterRouters", 
+          "when": "editorHasSelection", 
+          "group": "navigation",
+          "title": "提取路由"
+        }
+  
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "eslint": "^9.13.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
