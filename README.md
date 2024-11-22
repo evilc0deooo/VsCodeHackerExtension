@@ -18,5 +18,4 @@
 ## 参考
 
 -  https://juejin.cn/post/7121381959883816968
--  https://github.com/chasingboy/Xtools/blob/main/utils.py#L370
--  https://github.com/chasingboy/Xtools/blob/main/config.py
+-  https://github.com/chasingboy/Xtools
